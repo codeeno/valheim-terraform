@@ -1,0 +1,52 @@
+#######################################
+# VPC
+#######################################
+
+vpc_cidr          = "10.0.0.0/16"
+subnet_cidr       = "10.0.0.0/24"
+availability_zone = "eu-central-1a"
+vpc_subnet        = "10.0.0.0/24"
+
+#######################################
+# EC2
+#######################################
+
+instance_type = "t2.medium"
+
+#######################################
+# Scheduled startup/shutdown
+#######################################
+
+enable_scheduled_shutdown    = false
+shutdown_schedule_expression = "30 2 * * ? *"
+
+enable_scheduled_startup    = false
+startup_schedule_expression = "0 19 * * ? *"
+
+#######################################
+# Task Definition
+#######################################
+
+task_cpu            = 2048
+task_memory         = 3900
+container_image_tag = "latest"
+
+#######################################
+# Container Settings
+#######################################
+
+server_name                     = "MyServer"
+server_world                    = "MyWorld"
+server_password                 = "MyServerPassword"
+server_public                   = 0
+server_tz                       = "Europe/Berlin"
+server_webhook_url              = null
+server_auto_update              = 0
+server_auto_update_schedule     = "0 1 * * *"
+server_auto_backup              = 1
+server_auto_backup_schedule     = "*/15 * * * *"
+server_auto_backup_remove_old   = 1
+server_auto_backup_days_to_live = 3
+server_auto_backup_on_update    = 1
+server_update_on_startup        = 1
+server_auto_backup_on_shutdown  = 1
