@@ -16,6 +16,29 @@ The following external modules are used:
 * [terraform-aws-modules/terraform-aws-vpc](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 * [ cloudposse/terraform-aws-ecs-container-definition](https://github.com/cloudposse/terraform-aws-ecs-container-definition)
 
+## Setup
+
+Clone this repository and `cd` into it:
+
+```bash
+$ git clone https://github.com/codeeno/valheim-terraform
+$ cd valheim-terraform
+```
+
+Copy the `terraform.tfvars.sample` file:
+
+```bash
+$ mv terraform.tfvars.sample terraform.tfvars
+```
+
+Adjust the values in the `terraform.tfvars` to your liking. Then, apply the terraform:
+
+```bash
+$ terraform apply
+```
+
+Check the outputs for the elastic public IP address of your server.
+
 
 ## Inputs
 
