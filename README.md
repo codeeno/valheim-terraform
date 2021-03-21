@@ -4,7 +4,7 @@
 
 This terraform code sets up a Valheim server on AWS, based on [mbround18's valheim docker image](https://github.com/mbround18/valheim-docker). The following resources are created:
 
-* VPC with just one public subnet
+* VPC with one public subnet
 * EC2 instance
 * ECS cluster and Task Definition
 * EFS for storing server/saves/backups files
